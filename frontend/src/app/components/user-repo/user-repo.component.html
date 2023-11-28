@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- <div class="card-deck flex-row flex-nowrap"> -->
+
+    <div
+      class="col-sm-6 my-2 card-deck flex-row flex-nowrap"
+      *ngFor="let repo of user.repos"
+    >
+      <a
+        class="streched-link"
+        [href]="repo.repo_link"
+        style="text-decoration: none"
+      >
+        <div class="card">
+          <h5 class="card-header text-success fs-4 fw-bold">
+            {{ repo.name ? repo.name : "Null" }}
+          </h5>
+          <div class="card-body">
+            <p class="card-text text-truncate text-body">
+              {{ repo.description ? repo.description : "Null" }}
+            </p>
+            <div
+              class="badge bg-secondary py-2 me-2"
+              style="font-weight: 500; font-size: small"
+              *ngIf="repo.languages.length == 0"
+            >
+              <span>Null</span>
+            </div>
+            <div
+              class="badge bg-success py-2 me-2"
+              style="font-weight: 500; font-size: small"
+              *ngFor="let language of repo.languages; index as i"
+            >
+              <span *ngIf="i < 2">{{ language }}</span>
+              <span *ngIf="i == 2 && repo.languages.length > 3">
+                {{ language }} + {{ repo.languages.length - 3 }}
+              </span>
+              <span *ngIf="i == 2 && language.length == 3">
+                {{ language }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

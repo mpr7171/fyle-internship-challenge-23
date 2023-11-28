@@ -1,0 +1,43 @@
+<app-header (displayData)="displayUser($event)"></app-header>
+<div class="container" *ngIf="user.github_link; else noData">
+  <!-- <div *ngIf="!user.message; else notFound"> -->
+  <div class="container-fluid">
+    <app-user-details [user]="user"></app-user-details>
+    <app-user-repo [user]="user"></app-user-repo>
+  </div>
+  <!-- </div> -->
+  <!-- <ng-template #notFound>
+    <div class="container text-center p-5">
+      <div class="card p-5 m-5" style="background: #3caa61">
+        <h2>
+          GitHub API Limit Exceeded!! Reset Time is 1 hour, So please check it
+          after 1 hour.
+        </h2>
+      </div>
+    </div>
+  </ng-template> -->
+</div>
+<ng-template #noData>
+  <div class="container text-center p-5">
+    <div class="card p-5 m-5" style="background: #3caa61">
+      <h2>{{ errorMessage ? errorMessage : "No Data to Display!!" }}</h2>
+    </div>
+  </div>
+</ng-template>
+
+<!-- For Pagination - which is not done yet -->
+<!-- <nav aria-label="page-navigation">
+  <ul class="pagination justify-content-center my-5">
+    <li class="page-item">
+      <a class="page-link" href="#">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">2</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav> -->
