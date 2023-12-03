@@ -13,10 +13,10 @@ Each endpoint has to internally call Github’s APIs to fetch the data required 
 ## Steps to Run the App Locally:
 
 1.Clone the project
-  git clone https://github.com/Gopi1422/github-repo-listing.git
+  git clone https://github.com/mpr7171/fyle-internship-challenge-23.git
   
 2.Go to the project directory
-  cd github-repo-listing
+  cd fyle-internship-challenge-23
   
 3.Install dependencies
   npm install
