@@ -12,23 +12,23 @@ Each endpoint has to internally call Github’s APIs to fetch the data required 
 
 ## Steps to Run the App Locally:
 
-1.Clone the project
+1.Clone the project:
   git clone https://github.com/mpr7171/fyle-internship-challenge-23.git
   
-2.Go to the project directory
+2.Go to the project directory:
   cd fyle-internship-challenge-23
   
-3.Install dependencies
+3.Install dependencies:
   npm install
   
-4.Install Client dependencies
+4.Install Client dependencies:
   cd frontend/ 
   npm install –g @angular/cli
   npm install
   
-5.Start the server
+5.Start the server:
   npm start
   
-6.Start the client
+6.Start the client:
   cd frontend/
   ng serve
