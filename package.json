@@ -20,6 +20,7 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
+    "angular-cli-ghpages": "^0.6.2",
     "chai": "^4.3.7"
   }
 }
